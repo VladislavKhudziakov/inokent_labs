@@ -1,4 +1,6 @@
 #include "labs/task_1.hpp"
+#include "labs/matrix.hpp"
+
 #include <iostream>
 
 int main() {
@@ -18,6 +20,6 @@ int main() {
       {13, 14, 15, 16}
   };
 
-  std::cout << t_1::average(matrix); // 26
+  std::cout <<  t_1::average(matrix) << std::endl;// 26
   return 0;
 }
