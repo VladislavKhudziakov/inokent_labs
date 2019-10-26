@@ -2,7 +2,7 @@
 #pragma once
 #include <stdexcept>
 
-namespace t_1
+namespace l_5
 {
   template <typename T, unsigned size>
   constexpr void replace_on_indices(T(& arr)[size])

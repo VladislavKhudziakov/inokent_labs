@@ -4,7 +4,7 @@ project(labs)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(labs)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/labs)
 
 
 add_executable(labs main.cpp)

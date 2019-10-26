@@ -1,1 +1,3 @@
 labs/build
+.idea
+labs/cmake-build-debug
