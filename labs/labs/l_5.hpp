@@ -1,31 +1,25 @@
+//
+// Created by movleaxedx on 27.10.19.
+//
 
 #pragma once
-#include <stdexcept>
 
 namespace l_5
 {
-  template <typename T, unsigned size>
-  constexpr void replace_on_indices(T(& arr)[size])
-  {
-    for (unsigned i = 0; i < size; ++i) {
-      arr[i] = i;
-    }
-  }
-
-
-  template <typename T, unsigned rows, unsigned columns>
-  T average(T(& arr)[rows][columns])
-  {
-    static_assert(rows == columns && "ERROR: MATRIX IS NOT SQUARE");
-
+  template <typename T, size_t r, size_t c>
+  T average(T (&m)[r][c]) {
     T res = T();
+    T all = T();
 
-    for (unsigned i = 0; i < rows; ++i) {
-      for (unsigned j = 0; j < rows - (i + 1); j++) {
-        res += arr[i][j];
+    for (size_t i = 0; i < r; ++i) {
+      for (size_t j = 0; j < c; ++j) {
+        if (m[i][j] % 2 == 0) {
+          res += m[i][j];
+          ++all;
+        }
       }
     }
 
-    return res;
+    return res / all;
   }
 }
